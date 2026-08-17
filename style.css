@@ -1,0 +1,573 @@
+/* =====================================================
+   BIRHAN CHANIE PORTFOLIO
+   MAIN STYLESHEET
+   ===================================================== */
+
+/* ---------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #1f2937;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e5e7eb;
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #374151;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: calc(100vh - 75px);
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+.small-title {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.1;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.small-title) {
+    font-size: 17px;
+    color: #6b7280;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* ---------- PROFILE PHOTO ---------- */
+
+.hero-image {
+    flex: 0 0 auto;
+}
+
+.profile-photo {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 10px solid #ffffff;
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, 0.25);
+
+    background: #e5e7eb;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: #2563eb;
+}
+
+.btn.secondary:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+.section {
+    padding: 90px 25px;
+}
+
+.section.gray {
+    background: #f8fafc;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-label {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.section h2 {
+    font-size: 38px;
+    color: #111827;
+    margin-bottom: 35px;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-text {
+    max-width: 850px;
+    color: #6b7280;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- CARDS ---------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+
+    transition: all 0.3s ease;
+}
+
+.gray .card {
+    background: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #111827;
+    font-size: 19px;
+    margin-bottom: 14px;
+}
+.project img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+.card p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* ---------- EXPERIENCE ---------- */
+
+.experience-item {
+    position: relative;
+
+    max-width: 850px;
+
+    padding: 25px 30px;
+    margin-bottom: 25px;
+
+    background: #ffffff;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.experience-item h3 {
+    color: #111827;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.experience-item .company {
+    color: #2563eb;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    color: #6b7280;
+}
+
+
+/* ---------- PROJECTS ---------- */
+
+.project {
+    min-height: 210px;
+}
+
+.project h3 {
+    color: #111827;
+}
+
+
+/* ---------- CERTIFICATES ---------- */
+
+.certificate-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #2563eb;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.certificate-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+
+/* ---------- CV SECTION ---------- */
+
+.cv-section {
+    padding: 80px 25px;
+
+    text-align: center;
+
+    background: #111827;
+
+    color: #ffffff;
+}
+
+.cv-section h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.cv-section p {
+    color: #d1d5db;
+    margin-bottom: 25px;
+}
+
+.cv-section .btn {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact-info {
+    max-width: 700px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #4b5563;
+    font-size: 17px;
+}
+
+.contact-info a {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.social-links {
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        gap: 35px;
+    }
+
+    .profile-photo {
+        width: 280px;
+        height: 280px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 20px;
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero-content > p:not(.small-title) {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .section {
+        padding: 65px 20px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .cv-section {
+        padding: 60px 20px;
+    }
+
+    .cv-section h2 {
+        font-size: 28px;
+    }
+
+    .contact-info {
+        text-align: left;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .profile-photo {
+        width: 210px;
+        height: 210px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+}
